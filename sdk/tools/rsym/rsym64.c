@@ -739,11 +739,11 @@ ParsePEHeaders(PFILE_INFO File)
                                File->DosHeader->e_lfanew + sizeof(ULONG));
 
     /* Check for x64 image */
-    if (File->FileHeader->Machine != IMAGE_FILE_MACHINE_AMD64)
-    {
-        perror("Input file is not an x64 image.\n");
-        return -1;
-    }
+    // if (File->FileHeader->Machine != IMAGE_FILE_MACHINE_AMD64)
+    // {
+    //     perror("Input file is not an x64 image.\n");
+    //     return -1;
+    // }
 
     /* Locate optional header */
     File->OptionalHeader = (PIMAGE_OPTIONAL_HEADER64)(File->FileHeader + 1);

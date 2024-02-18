@@ -18,7 +18,7 @@ elseif(ARCH STREQUAL "arm")
     list(APPEND CRT_WINE_SOURCE
         wine/except_arm.c
     )
-elseif(ARCH STREQUAL "arm64")
+elseif(ARCH STREQUAL "arm64" OR ARCH STREQUAL "aarch64")
     list(APPEND CRT_WINE_SOURCE
         wine/except_arm64.c
     )

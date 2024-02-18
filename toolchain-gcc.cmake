@@ -21,14 +21,18 @@ if(NOT DEFINED MINGW_TOOLCHAIN_PREFIX)
 
     elseif(ARCH STREQUAL "amd64")
         set(MINGW_TOOLCHAIN_PREFIX "x86_64-w64-mingw32-" CACHE STRING "MinGW Toolchain Prefix")
-    elseif(ARCH STREQUAL "arm")
-        set(MINGW_TOOLCHAIN_PREFIX "arm-mingw32ce-" CACHE STRING "MinGW Toolchain Prefix")
+    elseif(ARCH STREQUAL "arm64" OR ARCH STREQUAL "aarch64")
+        set(MINGW_TOOLCHAIN_PREFIX "aarch64-w64-mingw32-" CACHE STRING "MinGW Toolchain Prefix")
     endif()
 endif()
 
 if(NOT DEFINED MINGW_TOOLCHAIN_SUFFIX)
     set(MINGW_TOOLCHAIN_SUFFIX "" CACHE STRING "MinGW Toolchain Suffix")
 endif()
+
+# The name of the target operating system
+set(CMAKE_SYSTEM_NAME Windows)
+set(CMAKE_SYSTEM_PROCESSOR arm64)
 
 # The name of the target operating system
 set(CMAKE_SYSTEM_NAME Windows)

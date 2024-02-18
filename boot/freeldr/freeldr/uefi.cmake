@@ -33,7 +33,7 @@ elseif(ARCH STREQUAL "arm")
         arch/arm/macharm.c
         arch/arm/debug.c)
     #TBD
-elseif(ARCH STREQUAL "arm64")
+elseif(ARCH STREQUAL "arm64" OR ARCH STREQUAL "aarch64")
     list(APPEND UEFILDR_ARC_SOURCE
         arch/arm64/mach.c)
     #TBD

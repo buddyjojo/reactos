@@ -74,7 +74,7 @@ elseif(ARCH STREQUAL "arm")
         math/arm/__rt_srsh.s
         math/arm/__rt_udiv64.s
     )
-elseif(ARCH STREQUAL "arm64")
+elseif(ARCH STREQUAL "arm64" OR ARCH STREQUAL "aarch64")
     list(APPEND MSVCRTEX_SOURCE
         math/arm/__rt_sdiv.c
         math/arm/__rt_sdiv64_worker.c

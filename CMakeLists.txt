@@ -259,9 +259,9 @@ Enable this if the module uses typeid or dynamic_cast. You will probably need to
         if(SARCH STREQUAL "omap3-zoom2")
             add_definitions(-D_ZOOM2_)
         endif()
-    elseif(ARCH STREQUAL "arm64")
+    elseif(ARCH STREQUAL "arm64" OR ARCH STREQUAL "aarch64")
         # GNU tools refer to arm64 as aarch64
-        add_definitions(-D_ARM64_ -D__arm64__ -D__aarch64__ -D_WIN64)
+        add_definitions(-D_M_ARM64 -D_ARM64_ -D__arm64__ -D__aarch64__ -D_WIN64)
     endif()
 
     # Other
@@ -272,7 +272,7 @@ Enable this if the module uses typeid or dynamic_cast. You will probably need to
         add_compile_definitions(USE_COMPILER_EXCEPTIONS)
     elseif(ARCH STREQUAL "arm")
         add_compile_definitions(USE_COMPILER_EXCEPTIONS)
-    elseif(ARCH STREQUAL "arm64")
+    elseif(ARCH STREQUAL "arm64" OR ARCH STREQUAL "aarch64")
         add_compile_definitions(USE_COMPILER_EXCEPTIONS)
     endif()
 
@@ -341,7 +341,7 @@ Enable this if the module uses typeid or dynamic_cast. You will probably need to
     elseif(MSVC)
         if (ARCH STREQUAL "amd64")
             include(sdk/cmake/baseaddress_msvc_x64.cmake)
-        elseif (ARCH STREQUAL "arm64")
+        elseif (ARCH STREQUAL "arm64" OR ARCH STREQUAL "aarch64")
             include(sdk/cmake/baseaddress_msvc_arm64.cmake)
         else()
             include(sdk/cmake/baseaddress_msvc.cmake)

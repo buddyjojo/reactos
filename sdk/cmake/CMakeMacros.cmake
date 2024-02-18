@@ -651,7 +651,7 @@ function(set_module_type MODULE TYPE)
             message(STATUS "${MODULE} has no base address")
         endif()
     elseif(TYPE IN_LIST KERNEL_MODULE_TYPES)
-        if (ARCH STREQUAL "arm64")
+        if (ARCH STREQUAL "arm64" OR ARCH STREQUAL "aarch64")
                 # special case for kernel
                 if (TYPE STREQUAL kernel)
                     set_image_base(${MODULE} 0x400000000)

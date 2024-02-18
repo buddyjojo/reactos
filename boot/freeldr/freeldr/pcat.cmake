@@ -161,10 +161,10 @@ if(MSVC AND CMAKE_C_COMPILER_ID STREQUAL "Clang")
     # We need to reduce the binary size
     target_compile_options(freeldr_common PRIVATE "/Os")
 endif()
-if(CMAKE_C_COMPILER_ID STREQUAL "GNU" OR CMAKE_C_COMPILER_ID STREQUAL "Clang")
-    # Prevent using SSE (no support in freeldr)
-    target_compile_options(freeldr_common PUBLIC -mno-sse)
-endif()
+# if(CMAKE_C_COMPILER_ID STREQUAL "GNU" OR CMAKE_C_COMPILER_ID STREQUAL "Clang")
+#     # Prevent using SSE (no support in freeldr)
+#     target_compile_options(freeldr_common PUBLIC -mno-sse)
+# endif()
 
 set(PCH_SOURCE
     ${PCATLDR_ARC_SOURCE}
