@@ -4706,6 +4706,9 @@ GetDlgItemTextW(
   _In_ int cchMax);
 
 UINT WINAPI GetDoubleClickTime(void);
+#if (_WIN32_WINNT >= 0x0500)
+BOOL WINAPI GetDpiForMonitorInternal(HMONITOR,UINT,UINT*,UINT*);
+#endif
 HWND WINAPI GetFocus(void);
 HWND WINAPI GetForegroundWindow(void);
 #if (_WIN32_WINNT >= 0x0500)
@@ -4993,6 +4996,7 @@ BOOL WINAPI GetMenuBarInfo(_In_ HWND, _In_ LONG, _In_ LONG, _Inout_ PMENUBARINFO
 BOOL WINAPI GetMenuInfo(_In_ HMENU, _Inout_ LPMENUINFO);
 #if (_WIN32_WINNT >= 0x0500)
 BOOL WINAPI GetProcessDefaultLayout(_Out_ DWORD*);
+BOOL WINAPI GetProcessDpiAwarenessInternal(HANDLE, DPI_AWARENESS*);
 #endif
 BOOL WINAPI GetScrollBarInfo(_In_ HWND, _In_ LONG, _Inout_ PSCROLLBARINFO);
 BOOL WINAPI GetTitleBarInfo(_In_ HWND, _Inout_ PTITLEBARINFO);
@@ -5375,6 +5379,7 @@ BOOL WINAPI SetMessageQueue(_In_ int);
 HWND WINAPI SetParent(_In_ HWND, _In_opt_ HWND);
 #if (_WIN32_WINNT >= 0x0500)
 BOOL WINAPI SetProcessDefaultLayout(_In_ DWORD);
+BOOL WINAPI SetProcessDpiAwarenessInternal(DPI_AWARENESS);
 #endif /* (_WIN32_WINNT >= 0x0500) */
 BOOL WINAPI SetProcessWindowStation(_In_ HWINSTA);
 BOOL WINAPI SetPropA(_In_ HWND, _In_ LPCSTR, _In_opt_ HANDLE);

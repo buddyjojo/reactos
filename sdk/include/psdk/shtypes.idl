@@ -189,3 +189,71 @@ cpp_quote("#define PERCEIVEDFLAG_NATIVESUPPORT 0x0004")
 cpp_quote("#define PERCEIVEDFLAG_GDIPLUS       0x0010")
 cpp_quote("#define PERCEIVEDFLAG_WMSDK         0x0020")
 cpp_quote("#define PERCEIVEDFLAG_ZIPFOLDER     0x0040")
+
+typedef [v1_enum] enum DEVICE_SCALE_FACTOR
+{
+  DEVICE_SCALE_FACTOR_INVALID = 0,
+  SCALE_100_PERCENT = 100,
+  SCALE_120_PERCENT = 120,
+  SCALE_125_PERCENT = 125,
+  SCALE_140_PERCENT = 140,
+  SCALE_150_PERCENT = 150,
+  SCALE_160_PERCENT = 160,
+  SCALE_175_PERCENT = 175,
+  SCALE_180_PERCENT = 180,
+  SCALE_200_PERCENT = 200,
+  SCALE_225_PERCENT = 225,
+  SCALE_250_PERCENT = 250,
+  SCALE_300_PERCENT = 300,
+  SCALE_350_PERCENT = 350,
+  SCALE_400_PERCENT = 400,
+  SCALE_450_PERCENT = 450,
+  SCALE_500_PERCENT = 500
+} DEVICE_SCALE_FACTOR;
+
+cpp_quote( "#ifndef LF_FACESIZE")
+#define LF_FACESIZE         32
+
+typedef struct tagLOGFONTA
+{
+    LONG lfHeight;
+    LONG lfWidth;
+    LONG lfEscapement;
+    LONG lfOrientation;
+    LONG lfWeight;
+    BYTE lfItalic;
+    BYTE lfUnderline;
+    BYTE lfStrikeOut;
+    BYTE lfCharSet;
+    BYTE lfOutPrecision;
+    BYTE lfClipPrecision;
+    BYTE lfQuality;
+    BYTE lfPitchAndFamily;
+    CHAR lfFaceName[LF_FACESIZE];
+} LOGFONTA;
+
+typedef struct tagLOGFONTW
+{
+    LONG lfHeight;
+    LONG lfWidth;
+    LONG lfEscapement;
+    LONG lfOrientation;
+    LONG lfWeight;
+    BYTE lfItalic;
+    BYTE lfUnderline;
+    BYTE lfStrikeOut;
+    BYTE lfCharSet;
+    BYTE lfOutPrecision;
+    BYTE lfClipPrecision;
+    BYTE lfQuality;
+    BYTE lfPitchAndFamily;
+    WCHAR lfFaceName[LF_FACESIZE];
+} LOGFONTW;
+
+#ifdef UNICODE
+  typedef LOGFONTW LOGFONT;
+#else
+  typedef LOGFONTA LOGFONT;
+#endif
+
+cpp_quote("#endif")

@@ -111,12 +111,12 @@ LSTATUS WINAPI RegDeleteKeyW(_In_ HKEY hKey, _In_ LPCWSTR lpSubKey);
 LSTATUS WINAPI RegDeleteKeyExA(_In_ HKEY hKey, _In_ LPCSTR lpSubKey, _In_ REGSAM samDesired, _Reserved_ DWORD Reserved);
 LSTATUS WINAPI RegDeleteKeyExW(_In_ HKEY hKey, _In_ LPCWSTR lpSubKey, _In_ REGSAM samDesired, _Reserved_ DWORD Reserved);
 
-#if (_WIN32_WINNT >= 0x0600)
+// Vista+
 LSTATUS WINAPI RegDeleteKeyValueA(_In_ HKEY, _In_opt_ LPCSTR, _In_opt_ LPCSTR);
 LSTATUS WINAPI RegDeleteKeyValueW(_In_ HKEY, _In_opt_ LPCWSTR, _In_opt_ LPCWSTR);
 LSTATUS WINAPI RegDeleteTreeA(_In_ HKEY, _In_opt_ LPCSTR);
 LSTATUS WINAPI RegDeleteTreeW(_In_ HKEY, _In_opt_ LPCWSTR);
-#endif
+
 
 LSTATUS WINAPI RegDeleteValueA(_In_ HKEY, _In_opt_ LPCSTR);
 LSTATUS WINAPI RegDeleteValueW(_In_ HKEY, _In_opt_ LPCWSTR);
