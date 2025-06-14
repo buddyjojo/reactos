@@ -266,4 +266,5 @@ endif()
 
 if(DLL_EXPORT_VERSION GREATER_EQUAL 0xA00)
     add_subdirectory(dcomp)
+    add_subdirectory(qwave)
 endif()
