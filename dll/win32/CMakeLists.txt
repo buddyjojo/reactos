@@ -263,3 +263,7 @@ if(DLL_EXPORT_VERSION GREATER_EQUAL 0x600)
     add_subdirectory(avrt)
     add_subdirectory(dwmapi)
 endif()
+
+if(DLL_EXPORT_VERSION GREATER_EQUAL 0xA00)
+    add_subdirectory(dcomp)
+endif()
