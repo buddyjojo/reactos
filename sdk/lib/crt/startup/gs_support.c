@@ -109,7 +109,7 @@ __declspec(noreturn) void __cdecl
 __report_gsfailure (ULONG_PTR StackCookie)
 {
   volatile UINT_PTR cookie[2] __MINGW_ATTRIB_UNUSED;
-#ifdef _WIN64
+#if defined(_WIN64) && !defined(__aarch64__)
   ULONG64 controlPC, imgBase, establisherFrame;
   PRUNTIME_FUNCTION fctEntry;
   PVOID hndData;
@@ -125,21 +125,32 @@ __report_gsfailure (ULONG_PTR StackCookie)
   else
 #endif /* _WIN64 */
     {
-#ifdef _WIN64
+#if defined(__x86_64__) || defined(_AMD64_)
       GS_ContextRecord.Rip = (ULONGLONG) _ReturnAddress();
       GS_ContextRecord.Rsp = (ULONGLONG) _AddressOfReturnAddress() + 8;
-#else
+#elif defined(__i386__) || defined(_X86_)
       GS_ContextRecord.Eip = (DWORD) _ReturnAddress();
       GS_ContextRecord.Esp = (DWORD) _AddressOfReturnAddress() + 4;
+#elif defined(__arm__) || defined(_ARM_)
+      GS_ContextRecord.Pc = (DWORD) _ReturnAddress();
+      GS_ContextRecord.Sp = (DWORD) _AddressOfReturnAddress() + 4;
+#elif defined(__arm64__) || defined(_ARM64_)
+      GS_ContextRecord.Pc = (ULONGLONG) _ReturnAddress();
+      GS_ContextRecord.Sp = (ULONGLONG) _AddressOfReturnAddress() + 4;
 #endif /* _WIN64 */
     }
 
-#ifdef _WIN64
+#if defined(__x86_64__) || defined(_AMD64_)
   GS_ExceptionRecord.ExceptionAddress = (PVOID) GS_ContextRecord.Rip;
   GS_ContextRecord.Rcx = StackCookie;
-#else
+#elif defined(__i386__) || defined(_X86_)
   GS_ExceptionRecord.ExceptionAddress = (PVOID) GS_ContextRecord.Eip;
   GS_ContextRecord.Ecx = StackCookie;
+#elif defined(__arm__) || defined(_ARM_)
+  GS_ExceptionRecord.ExceptionAddress = (PVOID) GS_ContextRecord.Pc;
+  UNUSED_PARAM(StackCookie);
+#elif defined(__arm64__) || defined(_ARM64_)
+  GS_ExceptionRecord.ExceptionAddress = (PVOID) GS_ContextRecord.Pc;
 #endif /* _WIN64 */
   GS_ExceptionRecord.ExceptionCode = STATUS_STACK_BUFFER_OVERRUN;
   GS_ExceptionRecord.ExceptionFlags = EXCEPTION_NONCONTINUABLE;

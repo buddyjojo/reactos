@@ -62,8 +62,16 @@ add_library(uefifreeldr_common
 target_compile_definitions(uefifreeldr_common PRIVATE UEFIBOOT)
 
 if(CMAKE_C_COMPILER_ID STREQUAL "GNU" OR CMAKE_C_COMPILER_ID STREQUAL "Clang")
-    # Prevent using SSE (no support in freeldr)
-    target_compile_options(uefifreeldr_common PUBLIC -mno-sse)
+    if(ARCH STREQUAL "i386")
+        # Prevent using SSE (no support in freeldr)
+        target_compile_options(uefifreeldr_common PUBLIC -mno-sse)
+    elseif(ARCH STREQUAL "amd64")
+        target_compile_options(uefifreeldr_common PUBLIC -mno-sse)
+    elseif(ARCH STREQUAL "arm")
+
+    elseif(ARCH STREQUAL "arm64")
+
+    endif()
 endif()
 
 set(PCH_SOURCE
