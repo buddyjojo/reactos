@@ -3,6 +3,7 @@ add_definitions(-D_MIDL_USE_GUIDDEF_)
 
 list(APPEND SOURCE
 #   access.idl
+    asyncinfo.idl
     activation.idl
     activaut.idl
     activdbg.idl
@@ -70,11 +71,13 @@ list(APPEND SOURCE
     devenum.idl
     devicetopology.idl
     dimm.idl
+    dispatcherqueue.idl
     dispex.idl
     dmodshow.idl
     docobj.idl
     docobjectservice.idl
     downloadmgr.idl
+    dragdropinterop.idl
     drmexternals.idl
     dwrite_1.idl
     dwrite_2.idl
@@ -96,8 +99,10 @@ list(APPEND SOURCE
     emptyvc.idl
     endpointvolume.idl
     exdisp.idl
+    eventtoken.idl
     fusion.idl
     hlink.idl
+    holographicspaceinterop.idl
     hstring.idl
     htiface.idl
     htiframe.idl
@@ -135,6 +140,7 @@ list(APPEND SOURCE
     natupnp.idl
     netcon.idl
     netfw.idl
+    netlistmgr.idl
     oaidl.idl
     objectarray.idl
     objidl.idl
@@ -191,10 +197,77 @@ list(APPEND SOURCE
     wbemcli.idl
     wbemdisp.idl
     wbemprov.idl
+    weakreference.idl
     wia_lh.idl
     wia_xp.idl
     wincodec.idl
     wincodecsdk.idl
+    windows.system.idl
+    windowscontracts.idl
+    windows.foundation.idl
+    windows.foundation.collections.idl
+    windows.ui.idl
+    windows.ui.core.idl
+    windows.ui.input.idl
+    windows.applicationmodel.idl
+    windows.applicationmodel.activation.idl
+    windows.applicationmodel.background.idl
+    windows.applicationmodel.core.idl
+    windows.applicationmodel.datatransfer.idl
+    windows.applicationmodel.datatransfer.dragdrop.idl
+    windows.applicationmodel.datatransfer.dragdrop.core.idl
+    windows.data.json.idl
+    windows.devices.bluetooth.idl
+    windows.devices.enumeration.idl
+    windows.devices.geolocation.idl
+    windows.devices.haptics.idl
+    windows.devices.input.idl
+    windows.devices.power.idl
+    windows.devices.usb.idl
+    windows.foundation.metadata.idl
+    windows.foundation.numerics.idl
+    windows.gaming.input.idl
+    windows.gaming.input.custom.idl
+    windows.gaming.input.forcefeedback.idl
+    windows.gaming.ui.idl
+    windows.globalization.idl
+    windows.graphics.idl
+    windows.graphics.capture.idl
+    windows.graphics.directx.idl
+    windows.graphics.directx.direct3d11.idl
+    windows.graphics.effects.idl
+    windows.graphics.holographic.idl
+    windows.graphics.imaging.idl
+    windows.management.deployment.idl
+    windows.media.idl
+    windows.media.closedcaptioning.idl
+    windows.media.devices.idl
+    windows.media.speechrecognition.idl
+    windows.media.speechsynthesis.idl
+    windows.networking.idl
+    windows.networking.connectivity.idl
+    windows.perception.spatial.idl
+    windows.perception.spatial.surfaces.idl
+    windows.devices.radios.idl
+    windows.security.authentication.onlineid.idl
+    windows.security.credentials.idl
+    windows.security.credentials.ui.idl
+    windows.security.cryptography.idl
+    windows.security.enterprisedata.idl
+    windows.security.exchangeactivesyncprovisioning.idl
+    windows.security.isolation.idl
+    windows.storage.fileproperties.idl
+    windows.storage.idl
+    windows.storage.search.idl
+    windows.storage.streams.idl
+    windows.system.power.idl
+    windows.system.profile.idl
+    windows.system.profile.systemmanufacturers.idl
+    windows.system.threading.idl
+    windows.system.userprofile.idl
+    windows.ui.composition.idl
+    ivectorchangedeventargs.idl
+    systemmediatransportcontrolsinterop.idl
     winsxs.idl
     wmcodecdsp.idl
     wmdrmsdk.idl
