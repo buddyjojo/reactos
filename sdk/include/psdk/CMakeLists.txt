@@ -5,6 +5,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 list(APPEND SOURCE
 #   access.idl
+    asyncinfo.idl
     activation.idl
     activaut.idl
     activdbg.idl
@@ -41,6 +42,7 @@ list(APPEND SOURCE
     devenum.idl
     devicetopology.idl
     dimm.idl
+    dispatcherqueue.idl
     dispex.idl
     docobj.idl
     docobjectservice.idl
@@ -51,6 +53,7 @@ list(APPEND SOURCE
     emptyvc.idl
     endpointvolume.idl
     exdisp.idl
+    eventtoken.idl
     fusion.idl
     hlink.idl
     hstring.idl
@@ -146,6 +149,11 @@ list(APPEND SOURCE
     wia_xp.idl
     wincodec.idl
     wincodecsdk.idl
+    windows.system.idl
+    windowscontracts.idl
+    windows.foundation.idl
+    windows.foundation.collections.idl
+    ivectorchangedeventargs.idl
     winsxs.idl
     wmdrmsdk.idl
     wmiutils.idl
