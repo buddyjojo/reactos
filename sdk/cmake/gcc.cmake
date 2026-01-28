@@ -45,7 +45,7 @@ endif()
 add_compile_options(-pipe -fms-extensions -fno-strict-aliasing -fno-common)
 
 # A long double is 64 bits
-add_compile_options(-mlong-double-64)
+#add_compile_options(-mlong-double-64)
 
 # Prevent GCC from searching any of the default directories.
 # The case for C++ is handled through the reactos_c++ INTERFACE library
@@ -186,6 +186,7 @@ add_compile_options(
     -Wno-unused-result # FIXME To be removed when CORE-17637 is resolved
     -Wno-format
     -Wno-maybe-uninitialized
+    -mno-stack-arg-probe # HACK
 )
 
 if(ARCH STREQUAL "arm")

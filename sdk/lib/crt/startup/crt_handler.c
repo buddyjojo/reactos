@@ -75,7 +75,9 @@ __mingw_init_ehandler (void)
       emu_xdata[e].AddressOfExceptionHandler =
 	(DWORD)(size_t) ((LPBYTE)__mingw_SEH_error_handler - _ImageBase);
       emu_pdata[e].BeginAddress = pSec->VirtualAddress;
+#ifndef _M_ARM64
       emu_pdata[e].EndAddress = pSec->VirtualAddress + pSec->Misc.VirtualSize;
+#endif
       emu_pdata[e].UnwindData =
 	(DWORD)(size_t)((LPBYTE)&emu_xdata[e] - _ImageBase);
       ++e;

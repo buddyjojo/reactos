@@ -126,7 +126,7 @@ void * __cdecl __attribute__((error("Can only be used inside an exception filter
 #define _SEH3$_AUTO_CLEANUP __attribute__((cleanup(_SEH3$_AutoCleanup)))
 
 int
-__attribute__((regparm(3)))
+//__attribute__((regparm(3)))
 __attribute__((returns_twice))
 _SEH3$_RegisterFrameWithNonVolatiles(
     volatile SEH3$_REGISTRATION_FRAME* RegistrationFrame,
@@ -134,7 +134,7 @@ _SEH3$_RegisterFrameWithNonVolatiles(
     void* AllocaFrame);
 
 int
-__attribute__((regparm(3)))
+//__attribute__((regparm(3)))
 __attribute__((returns_twice))
 _SEH3$_RegisterTryLevelWithNonVolatiles(
     volatile SEH3$_REGISTRATION_FRAME* RegistrationFrame,
@@ -236,7 +236,7 @@ _SEH3$_RegisterTryLevelWithNonVolatiles(
 
 /* Use the global unregister function */
 void
-__attribute__((regparm(1)))
+//__attribute__((regparm(1)))
 _SEH3$_AutoCleanup(
     volatile SEH3$_REGISTRATION_FRAME *Frame);
 

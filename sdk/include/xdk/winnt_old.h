@@ -2348,6 +2348,15 @@ typedef struct _DISPATCHER_CONTEXT {
     BOOLEAN ControlPcIsUnwound;
     PBYTE  NonVolatileRegisters;
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
+
+NTSYSAPI
+BOOLEAN
+__cdecl
+RtlAddFunctionTable(PRUNTIME_FUNCTION FunctionTable,
+                    DWORD EntryCount,
+                    DWORD64 BaseAddress);
+
+
 #else
 #error "undefined processor type"
 #endif
