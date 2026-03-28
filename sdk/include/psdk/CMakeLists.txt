@@ -170,6 +170,8 @@ list(APPEND SOURCE
     windows.management.deployment.idl
     windows.media.idl
     windows.media.closedcaptioning.idl
+    windows.networking.idl
+    windows.networking.connectivity.idl
     windows.devices.radios.idl
     windows.security.authentication.onlineid.idl
     windows.security.isolation.idl
