@@ -274,3 +274,7 @@ if(DLL_EXPORT_VERSION GREATER_EQUAL 0x600)
     add_subdirectory(profapi)
     add_subdirectory(coremessaging)
 endif()
+
+if(DLL_EXPORT_VERSION GREATER_EQUAL 0xA00)
+    add_subdirectory(windows.media.mediacontrol)
+endif()

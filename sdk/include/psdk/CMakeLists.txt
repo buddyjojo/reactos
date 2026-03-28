@@ -153,7 +153,14 @@ list(APPEND SOURCE
     windowscontracts.idl
     windows.foundation.idl
     windows.foundation.collections.idl
+    windows.devices.geolocation.idl
+    windows.media.idl
+    windows.storage.fileproperties.idl
+    windows.storage.idl
+    windows.storage.search.idl
+    windows.storage.streams.idl
     ivectorchangedeventargs.idl
+    systemmediatransportcontrolsinterop.idl
     winsxs.idl
     wmdrmsdk.idl
     wmiutils.idl
