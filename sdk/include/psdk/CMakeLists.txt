@@ -159,6 +159,7 @@ list(APPEND SOURCE
     windows.storage.idl
     windows.storage.search.idl
     windows.storage.streams.idl
+    windows.system.profile.systemmanufacturers.idl
     ivectorchangedeventargs.idl
     systemmediatransportcontrolsinterop.idl
     winsxs.idl
