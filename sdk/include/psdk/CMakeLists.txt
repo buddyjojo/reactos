@@ -166,6 +166,7 @@ list(APPEND SOURCE
     windows.devices.input.idl
     windows.devices.usb.idl
     windows.globalization.idl
+    windows.management.deployment.idl
     windows.media.idl
     windows.media.closedcaptioning.idl
     windows.devices.radios.idl
