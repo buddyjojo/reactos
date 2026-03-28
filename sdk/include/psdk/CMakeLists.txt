@@ -158,6 +158,7 @@ list(APPEND SOURCE
     windows.devices.enumeration.idl
     windows.devices.geolocation.idl
     windows.devices.usb.idl
+    windows.globalization.idl
     windows.media.idl
     windows.media.closedcaptioning.idl
     windows.devices.radios.idl
@@ -166,6 +167,7 @@ list(APPEND SOURCE
     windows.storage.search.idl
     windows.storage.streams.idl
     windows.system.profile.systemmanufacturers.idl
+    windows.system.userprofile.idl
     ivectorchangedeventargs.idl
     systemmediatransportcontrolsinterop.idl
     winsxs.idl
