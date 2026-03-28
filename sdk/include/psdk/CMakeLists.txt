@@ -153,11 +153,13 @@ list(APPEND SOURCE
     windowscontracts.idl
     windows.foundation.idl
     windows.foundation.collections.idl
+    windows.ui.idl
     windows.devices.bluetooth.idl
     windows.devices.enumeration.idl
     windows.devices.geolocation.idl
     windows.devices.usb.idl
     windows.media.idl
+    windows.media.closedcaptioning.idl
     windows.devices.radios.idl
     windows.storage.fileproperties.idl
     windows.storage.idl
