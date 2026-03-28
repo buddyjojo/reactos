@@ -156,6 +156,7 @@ list(APPEND SOURCE
     windows.devices.bluetooth.idl
     windows.devices.enumeration.idl
     windows.devices.geolocation.idl
+    windows.devices.usb.idl
     windows.media.idl
     windows.devices.radios.idl
     windows.storage.fileproperties.idl
