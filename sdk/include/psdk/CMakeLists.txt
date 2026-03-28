@@ -169,6 +169,7 @@ list(APPEND SOURCE
     windows.media.idl
     windows.media.closedcaptioning.idl
     windows.devices.radios.idl
+    windows.security.isolation.idl
     windows.storage.fileproperties.idl
     windows.storage.idl
     windows.storage.search.idl
