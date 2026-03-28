@@ -276,6 +276,7 @@ if(DLL_EXPORT_VERSION GREATER_EQUAL 0x600)
 endif()
 
 if(DLL_EXPORT_VERSION GREATER_EQUAL 0xA00)
+    add_subdirectory(windows.applicationmodel)
     add_subdirectory(windows.devices.bluetooth)
     add_subdirectory(windows.devices.enumeration)
     add_subdirectory(windows.devices.usb)

@@ -154,9 +154,16 @@ list(APPEND SOURCE
     windows.foundation.idl
     windows.foundation.collections.idl
     windows.ui.idl
+    windows.ui.core.idl
+    windows.ui.input.idl
+    windows.applicationmodel.idl
+    windows.applicationmodel.activation.idl
+    windows.applicationmodel.background.idl
+    windows.applicationmodel.core.idl
     windows.devices.bluetooth.idl
     windows.devices.enumeration.idl
     windows.devices.geolocation.idl
+    windows.devices.input.idl
     windows.devices.usb.idl
     windows.globalization.idl
     windows.media.idl
