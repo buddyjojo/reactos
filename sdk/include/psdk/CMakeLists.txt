@@ -165,6 +165,7 @@ list(APPEND SOURCE
     windows.devices.geolocation.idl
     windows.devices.input.idl
     windows.devices.usb.idl
+    windows.gaming.ui.idl
     windows.globalization.idl
     windows.management.deployment.idl
     windows.media.idl
