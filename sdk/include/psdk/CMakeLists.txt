@@ -177,8 +177,11 @@ list(APPEND SOURCE
     windows.gaming.input.forcefeedback.idl
     windows.gaming.ui.idl
     windows.globalization.idl
+    windows.graphics.idl
+    windows.graphics.capture.idl
     windows.graphics.directx.idl
     windows.graphics.directx.direct3d11.idl
+    windows.graphics.effects.idl
     windows.graphics.holographic.idl
     windows.management.deployment.idl
     windows.media.idl
@@ -202,6 +205,7 @@ list(APPEND SOURCE
     windows.system.profile.idl
     windows.system.profile.systemmanufacturers.idl
     windows.system.userprofile.idl
+    windows.ui.composition.idl
     ivectorchangedeventargs.idl
     systemmediatransportcontrolsinterop.idl
     winsxs.idl
