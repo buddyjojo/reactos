@@ -174,11 +174,13 @@ list(APPEND SOURCE
     windows.networking.connectivity.idl
     windows.devices.radios.idl
     windows.security.authentication.onlineid.idl
+    windows.security.exchangeactivesyncprovisioning.idl
     windows.security.isolation.idl
     windows.storage.fileproperties.idl
     windows.storage.idl
     windows.storage.search.idl
     windows.storage.streams.idl
+    windows.system.profile.idl
     windows.system.profile.systemmanufacturers.idl
     windows.system.userprofile.idl
     ivectorchangedeventargs.idl
