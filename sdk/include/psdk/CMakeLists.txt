@@ -164,9 +164,14 @@ list(APPEND SOURCE
     windows.devices.bluetooth.idl
     windows.devices.enumeration.idl
     windows.devices.geolocation.idl
+    windows.devices.haptics.idl
     windows.devices.input.idl
+    windows.devices.power.idl
     windows.devices.usb.idl
     windows.foundation.numerics.idl
+    windows.gaming.input.idl
+    windows.gaming.input.custom.idl
+    windows.gaming.input.forcefeedback.idl
     windows.gaming.ui.idl
     windows.globalization.idl
     windows.graphics.directx.idl
@@ -190,6 +195,7 @@ list(APPEND SOURCE
     windows.storage.idl
     windows.storage.search.idl
     windows.storage.streams.idl
+    windows.system.power.idl
     windows.system.profile.idl
     windows.system.profile.systemmanufacturers.idl
     windows.system.userprofile.idl

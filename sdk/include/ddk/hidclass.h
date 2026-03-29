@@ -25,6 +25,11 @@
 
 #include "hidpi.h"
 
+#ifndef PINTERFACE_REFERENCE
+typedef VOID (*PINTERFACE_REFERENCE)(PVOID Context);
+typedef VOID (*PINTERFACE_DEREFERENCE)(PVOID Context);
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
