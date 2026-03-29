@@ -56,6 +56,7 @@ list(APPEND SOURCE
     eventtoken.idl
     fusion.idl
     hlink.idl
+    holographicspaceinterop.idl
     hstring.idl
     htiface.idl
     htiframe.idl
@@ -165,13 +166,19 @@ list(APPEND SOURCE
     windows.devices.geolocation.idl
     windows.devices.input.idl
     windows.devices.usb.idl
+    windows.foundation.numerics.idl
     windows.gaming.ui.idl
     windows.globalization.idl
+    windows.graphics.directx.idl
+    windows.graphics.directx.direct3d11.idl
+    windows.graphics.holographic.idl
     windows.management.deployment.idl
     windows.media.idl
     windows.media.closedcaptioning.idl
     windows.networking.idl
     windows.networking.connectivity.idl
+    windows.perception.spatial.idl
+    windows.perception.spatial.surfaces.idl
     windows.devices.radios.idl
     windows.security.authentication.onlineid.idl
     windows.security.credentials.ui.idl
