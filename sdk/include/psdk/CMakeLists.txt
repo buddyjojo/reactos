@@ -212,6 +212,7 @@ list(APPEND SOURCE
     windows.system.power.idl
     windows.system.profile.idl
     windows.system.profile.systemmanufacturers.idl
+    windows.system.threading.idl
     windows.system.userprofile.idl
     windows.ui.composition.idl
     ivectorchangedeventargs.idl
