@@ -175,6 +175,7 @@ list(APPEND SOURCE
     windows.devices.input.idl
     windows.devices.power.idl
     windows.devices.usb.idl
+    windows.foundation.metadata.idl
     windows.foundation.numerics.idl
     windows.gaming.input.idl
     windows.gaming.input.custom.idl
