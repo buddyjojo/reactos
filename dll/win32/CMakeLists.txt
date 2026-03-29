@@ -277,6 +277,7 @@ endif()
 
 if(DLL_EXPORT_VERSION GREATER_EQUAL 0xA00)
     add_subdirectory(appxdeploymentclient)
+    add_subdirectory(cryptowinrt)
     add_subdirectory(geolocation)
     add_subdirectory(graphicscapture)
     add_subdirectory(hvsimanagementapi)

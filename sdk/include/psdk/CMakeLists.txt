@@ -194,7 +194,9 @@ list(APPEND SOURCE
     windows.perception.spatial.surfaces.idl
     windows.devices.radios.idl
     windows.security.authentication.onlineid.idl
+    windows.security.credentials.idl
     windows.security.credentials.ui.idl
+    windows.security.cryptography.idl
     windows.security.exchangeactivesyncprovisioning.idl
     windows.security.isolation.idl
     windows.storage.fileproperties.idl
