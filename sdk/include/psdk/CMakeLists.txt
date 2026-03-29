@@ -175,6 +175,8 @@ list(APPEND SOURCE
     windows.management.deployment.idl
     windows.media.idl
     windows.media.closedcaptioning.idl
+    windows.media.speechrecognition.idl
+    windows.media.speechsynthesis.idl
     windows.networking.idl
     windows.networking.connectivity.idl
     windows.perception.spatial.idl
