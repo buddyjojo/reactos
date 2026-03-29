@@ -47,6 +47,7 @@ list(APPEND SOURCE
     docobj.idl
     docobjectservice.idl
     downloadmgr.idl
+    dragdropinterop.idl
     drmexternals.idl
     dxgiformat.idl
 #   dyngraph.idl
@@ -163,6 +164,9 @@ list(APPEND SOURCE
     windows.applicationmodel.activation.idl
     windows.applicationmodel.background.idl
     windows.applicationmodel.core.idl
+    windows.applicationmodel.datatransfer.idl
+    windows.applicationmodel.datatransfer.dragdrop.idl
+    windows.applicationmodel.datatransfer.dragdrop.core.idl
     windows.data.json.idl
     windows.devices.bluetooth.idl
     windows.devices.enumeration.idl
@@ -183,6 +187,7 @@ list(APPEND SOURCE
     windows.graphics.directx.direct3d11.idl
     windows.graphics.effects.idl
     windows.graphics.holographic.idl
+    windows.graphics.imaging.idl
     windows.management.deployment.idl
     windows.media.idl
     windows.media.closedcaptioning.idl
@@ -197,6 +202,7 @@ list(APPEND SOURCE
     windows.security.credentials.idl
     windows.security.credentials.ui.idl
     windows.security.cryptography.idl
+    windows.security.enterprisedata.idl
     windows.security.exchangeactivesyncprovisioning.idl
     windows.security.isolation.idl
     windows.storage.fileproperties.idl
