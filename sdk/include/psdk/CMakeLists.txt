@@ -162,6 +162,7 @@ list(APPEND SOURCE
     windows.applicationmodel.activation.idl
     windows.applicationmodel.background.idl
     windows.applicationmodel.core.idl
+    windows.data.json.idl
     windows.devices.bluetooth.idl
     windows.devices.enumeration.idl
     windows.devices.geolocation.idl
