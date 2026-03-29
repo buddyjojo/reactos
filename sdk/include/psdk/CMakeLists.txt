@@ -146,6 +146,7 @@ list(APPEND SOURCE
     wbemcli.idl
     wbemdisp.idl
     wbemprov.idl
+    weakreference.idl
     wia_lh.idl
     wia_xp.idl
     wincodec.idl
