@@ -282,3 +282,7 @@ endif()
 if(DLL_EXPORT_VERSION GREATER_EQUAL 0x603)
    add_subdirectory(rtworkq)
 endif()
+
+if(DLL_EXPORT_VERSION GREATER_EQUAL 0xA00)
+   add_subdirectory(windows.media.mediacontrol)
+endif()

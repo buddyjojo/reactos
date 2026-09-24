@@ -27,6 +27,10 @@
 #include <winbase.h>
 #include <stdio.h> // In the future: replace by <wine/debug.h>
 
+#ifdef WINETEST_USE_DBGSTR_HSTRING
+#include "winstring.h"
+#endif
+
 #ifdef __GNUC__
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wunused-function"
@@ -920,6 +924,11 @@ extern const char *wine_dbgstr_rect( const RECT *rect );
 #ifdef WINETEST_USE_DBGSTR_LONGLONG
 extern const char *wine_dbgstr_longlong( ULONGLONG ll );
 #endif
+
+#if defined(__hstring_h__) && defined(__WINSTRING_H_)
+extern const char *wine_dbgstr_hstring( HSTRING hstr );
+#endif
+
 static inline const char *debugstr_a( const char *s )  { return wine_dbgstr_an( s, -1 ); }
 static inline const char *debugstr_an( const CHAR *s, intptr_t n ) { return wine_dbgstr_an( s, n ); }
 static inline const char *debugstr_w( const WCHAR *s ) { return wine_dbgstr_wn( s, -1 ); }
@@ -927,6 +936,11 @@ static inline const char *debugstr_wn( const WCHAR *s, int n ) { return wine_dbg
 static inline const char *debugstr_guid( const struct _GUID *id ) { return wine_dbgstr_guid(id); }
 static inline const char *wine_dbgstr_a( const char *s )  { return wine_dbgstr_an( s, -1 ); }
 static inline const char *wine_dbgstr_w( const WCHAR *s ) { return wine_dbgstr_wn( s, -1 ); }
+
+#if defined(__hstring_h__) && defined(__WINSTRING_H_)
+static inline const char *debugstr_hstring( struct HSTRING__ *s ) { return wine_dbgstr_hstring( s ); }
+#endif
+
 #if defined(__oaidl_h__) && defined(V_VT)
 extern const char *wine_dbgstr_variant(const VARIANT *var);
 static inline const char *debugstr_variant( const VARIANT *v ) { return wine_dbgstr_variant( v ); }
@@ -1350,6 +1364,15 @@ const char *wine_dbgstr_longlong( ULONGLONG ll )
         sprintf( res, "%lx", (unsigned long)ll );
     release_temp_buffer( res, strlen(res) + 1 );
     return res;
+}
+#endif
+
+#ifdef WINETEST_USE_DBGSTR_HSTRING
+const char *wine_dbgstr_hstring( HSTRING hstr )
+{
+    UINT32 len;
+    const WCHAR *str = WindowsGetStringRawBuffer( hstr, &len );
+    return wine_dbgstr_wn( str, len );
 }
 #endif
 
