@@ -1,0 +1,9 @@
+
+remove_definitions(-D_WIN32_WINNT=0x502)
+add_definitions(-D_WIN32_WINNT=0x600)
+
+add_executable(windows.system.profile.systemmanufacturers_winetest smbios.c)
+target_compile_definitions(windows.system.profile.systemmanufacturers_winetest PRIVATE STANDALONE __WINESRC__)
+set_module_type(windows.system.profile.systemmanufacturers_winetest win32cui)
+add_importlibs(windows.system.profile.systemmanufacturers_winetest windows.system.profile.systemmanufacturers combase msvcrt kernel32)
+add_rostests_file(TARGET windows.system.profile.systemmanufacturers_winetest)
