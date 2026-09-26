@@ -132,6 +132,7 @@ AddReg=Classes
 11,,windows.devices.bluetooth.dll,1
 11,,windows.devices.enumeration.dll,1
 11,,windows.devices.usb.dll,1
+11,,windows.globalization.dll,1
 11,,windows.media.dll,1
 11,,windows.media.mediacontrol.dll,1
 11,,windows.system.profile.systemmanufacturers.dll,1

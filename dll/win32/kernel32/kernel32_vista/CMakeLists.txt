@@ -38,6 +38,7 @@ add_dependencies(kernel32_vista_static psdk)
 add_library(kernel32_vista MODULE
     DllMain.c
     kernel32_vista.rc
+    ${CMAKE_CURRENT_BINARY_DIR}/kernel32_vista_stubs.c
     ${CMAKE_CURRENT_BINARY_DIR}/kernel32_vista.def)
 set_module_type(kernel32_vista win32dll ENTRYPOINT DllMain 12)
 target_link_libraries(kernel32_vista kernel32_vista_static kernel32_shared)

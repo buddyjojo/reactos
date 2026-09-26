@@ -1,0 +1,11 @@
+
+add_definitions(-DWINETEST_USE_DBGSTR_HSTRING)
+remove_definitions(-D_WIN32_WINNT=0x502)
+add_definitions(-D_WIN32_WINNT=0x600)
+
+add_executable(windows.globalization_winetest globalization.c)
+target_compile_definitions(windows.globalization_winetest PRIVATE STANDALONE __WINESRC__)
+set_module_type(windows.globalization_winetest win32cui)
+target_link_libraries(windows.globalization_winetest uuid)
+add_importlibs(windows.globalization_winetest windows.globalization combase msvcrt kernel32)
+add_rostests_file(TARGET windows.globalization_winetest)
